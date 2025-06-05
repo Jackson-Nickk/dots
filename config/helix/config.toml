@@ -1,0 +1,22 @@
+theme = "GruvAyu"
+
+[editor]
+line-number = "relative"
+mouse = false
+clipboard-provider = "wayland"
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "block"
+
+[editor.file-picker]
+hidden = false
+
+# [editor.auto-save]
+# focus-lost = true
+# after-delay.enable = true
+# after-delay.timeout = 1
+
+[editor.soft-wrap]
+enable = true
