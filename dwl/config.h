@@ -6,9 +6,9 @@
 /* appearance */
 static const int sloppyfocus               = 0;  /* focus follows mouse */
 static const int bypass_surface_visibility = 0;  /* 1 means idle inhibitors will disable idle tracking even if it's surface isn't visible  */
-static const int smartgaps                 = 1;  /* 1 means no outer gap when there is only one window */
+static const int smartgaps                 = 0;  /* 1 means no outer gap when there is only one window */
 static int gaps                            = 1;  /* 1 means gaps between windows are added */
-static const unsigned int gappx            = 5; /* gap pixel between windows */
+static const unsigned int gappx            = 8;  /* gap pixel between windows */
 static const unsigned int borderpx         = 2;  /* border pixel of windows */
 static const float rootcolor[]             = COLOR(0x222222ff);
 static const float bordercolor[]           = COLOR(0x444444ff);
@@ -131,10 +131,10 @@ static const Key keys[] = {
 	{ MODKEY|WLR_MODIFIER_SHIFT,      XKB_KEY_Z,             addscratchpad,         {0} },
 	{ MODKEY|WLR_MODIFIER_CTRL,       XKB_KEY_z,             togglescratchpad,      {0} },
 	{ MODKEY,                         XKB_KEY_z,             removescratchpad,      {0} },
-	{ MODKEY|WLR_MODIFIER_SHIFT,      XKB_KEY_t,             setlayout,             {.v = &layouts[0]} },
-	{ MODKEY|WLR_MODIFIER_SHIFT,      XKB_KEY_f,             setlayout,             {.v = &layouts[1]} },
-	{ MODKEY|WLR_MODIFIER_SHIFT,      XKB_KEY_m,             setlayout,             {.v = &layouts[2]} },
-	{ MODKEY|WLR_MODIFIER_SHIFT,      XKB_KEY_space,         togglefloating,        {0} },
+	{ MODKEY|WLR_MODIFIER_SHIFT,      XKB_KEY_T,             setlayout,             {.v = &layouts[0]} },
+	{ MODKEY|WLR_MODIFIER_SHIFT,      XKB_KEY_F,             setlayout,             {.v = &layouts[1]} },
+	{ MODKEY|WLR_MODIFIER_SHIFT,      XKB_KEY_M,             setlayout,             {.v = &layouts[2]} },
+	{ MODKEY,                         XKB_KEY_space,         togglefloating,        {0} },
 	{ MODKEY,                         XKB_KEY_f,             togglefullscreen,      {0} },
 	{ MODKEY,                         XKB_KEY_v,             togglecenter,          {0} },
 	{ MODKEY,                         XKB_KEY_a,             toggleswallow,         {0} },
