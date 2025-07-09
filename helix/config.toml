@@ -25,7 +25,8 @@ skip-levels = 0
 [keys.normal]
 "ret" = ["open_below", "normal_mode"]
 C-o = ":config-open"
-Z = { Q = ":quit!", Z = ":x" }
+Z = { Z = ":write-quit" }
+E = { E = ":quit!" }
 A-d = "delete_selection" # Delete slection and yank it.
 d = "delete_selection_noyank" # Delete selection and don't yank it.
 A-c = "change_selection" # Delete selection, yank it, and enter Insert Mode.
