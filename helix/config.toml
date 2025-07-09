@@ -1,9 +1,11 @@
-theme = "GruvAyu"
+theme = "ashen"
 
 [editor]
 line-number = "relative"
 mouse = false
 clipboard-provider = "wayland"
+cursorline = true
+color-modes = true
 
 [editor.cursor-shape]
 insert = "bar"
@@ -13,10 +15,18 @@ select = "block"
 [editor.file-picker]
 hidden = false
 
-# [editor.auto-save]
-# focus-lost = true
-# after-delay.enable = true
-# after-delay.timeout = 1
-
 [editor.soft-wrap]
 enable = true
+
+[editor.indent-guides]
+render = true
+skip-levels = 0
+
+[keys.normal]
+"ret" = ["open_below", "normal_mode"]
+C-o = ":config-open"
+Z = { Q = ":quit!", Z = ":x" }
+A-d = "delete_selection" # Delete slection and yank it.
+d = "delete_selection_noyank" # Delete selection and don't yank it.
+A-c = "change_selection" # Delete selection, yank it, and enter Insert Mode.
+c = "change_selection_noyank" # Delete selection, don't yank, and enter Insert Mode.
