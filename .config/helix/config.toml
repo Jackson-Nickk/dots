@@ -1,0 +1,32 @@
+theme = "ayu_evolve"
+
+[editor]
+line-number = "relative"
+mouse = true
+clipboard-provider = "wayland"
+cursorline = true
+color-modes = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+
+[editor.soft-wrap]
+enable = true
+
+[editor.indent-guides]
+render = true
+skip-levels = 0
+
+[keys.normal]
+"ret" = ["open_below", "normal_mode"]
+C-o = ":config-open"
+Z = { Z = ":write-quit" }
+A-d = "delete_selection" # Delete slection and yank it.
+d = "delete_selection_noyank" # Delete selection and don't yank it.
+A-c = "change_selection" # Delete selection, yank it, and enter Insert Mode.
+c = "change_selection_noyank" # Delete selection, don't yank, and enter Insert Mode.
