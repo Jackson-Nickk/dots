@@ -3,7 +3,10 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-PS1='[\u@\h \W]\$ '
+# Git Prompt
+. ~/.config/git-prompt.sh
+GIT_PS1_SHOWDIRTYSTATE=1
+PS1='[\u \w]$(__git_ps1 " (%s)")\$ '
 
 # Aliases
 alias g='grep'
@@ -31,6 +34,7 @@ alias xu='doas xbps-install -Su'
 alias xq='xbps-query'
 alias xs='xbps-query -Rs'
 alias xr='doas xbps-remove'
+alias o='xdg-open'
 
 # lfcd
 alias lf='lfcd'
@@ -39,6 +43,3 @@ lfcd () {
     # `command` is needed in case `lfcd` is aliased to `lf`
     cd "$(command lf -print-last-dir "$@")"
 }
-
-# Created by `pipx` on 2025-07-30 12:30:56
-export PATH="$PATH:/home/jack/.local/bin"

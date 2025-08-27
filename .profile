@@ -1,12 +1,13 @@
-#!/bin/sh
+# Jack's Profile
 
-export EDITOR=hx
-export PATH=$PATH:/home/jack/sc
-export PATH=$PATH:/home/jack/go/bin
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.local/sc:$PATH"
+export PATH="/home/jack/go/bin:$PATH"
+export EDITOR="hx"
 export MANPAGER="less -R --use-color -Dd+r -Du+b -Dk+y"
 export PAGER="less -R --use-color -Dd+r -Du+b -Dk+y"
-export QT_QPA_PLATFORM=wayland
-export MOZ_ENABLE_WAYLAND=1
+export QT_QPA_PLATFORM="wayland"
+export MOZ_ENABLE_WAYLAND="1"
 
 if [ -n "$BASH_VERSION" ]; then
     if [ -f "$HOME/.bashrc" ]; then
@@ -14,8 +15,5 @@ if [ -n "$BASH_VERSION" ]; then
     fi
 fi
 
-# Created by `pipx` on 2025-07-30 12:30:56
-PATH="$PATH:/home/jack/.local/bin"
-
-# dwl -s startup.sh &
+dwl -s startup.sh &
 
