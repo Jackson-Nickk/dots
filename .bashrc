@@ -35,6 +35,7 @@ alias xq='xbps-query'
 alias xs='xbps-query -Rs'
 alias xr='doas xbps-remove'
 alias o='xdg-open'
+alias cmctl='connmanctl'
 
 # lfcd
 alias lf='lfcd'
@@ -43,3 +44,6 @@ lfcd () {
     # `command` is needed in case `lfcd` is aliased to `lf`
     cd "$(command lf -print-last-dir "$@")"
 }
+
+# HomeBrew
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"

@@ -15,5 +15,4 @@ if [ -n "$BASH_VERSION" ]; then
     fi
 fi
 
-dwl -s startup.sh &
-
+dwl -s startup.sh && clear
