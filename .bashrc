@@ -36,6 +36,7 @@ alias xs='xbps-query -Rs'
 alias xr='doas xbps-remove'
 alias o='xdg-open'
 alias cmctl='connmanctl'
+alias man='batman'
 
 # lfcd
 alias lf='lfcd'
