@@ -39,13 +39,40 @@ alias cmctl='connmanctl'
 alias man='batman'
 alias lssvs='ls /etc/sv'
 alias lssve='ls /var/service'
-
-# lfcd
 alias lf='lfcd'
 
+# LFCD
 lfcd () {
     # `command` is needed in case `lfcd` is aliased to `lf`
     cd "$(command lf -print-last-dir "$@")"
+}
+
+# Make a directory and enter it
+mkcd ()
+{
+    mkdir -p -- "$1" && cd -P -- "$1"
+}
+
+# Universal extract function
+extract ()
+{
+    if [ -f "$1" ] ; then
+        case "$1" in
+            *.tar.bz2)   tar xvjf "$1"    ;;
+            *.tar.gz)    tar xvzf "$1"    ;;
+            *.bz2)       bunzip2 "$1"     ;;
+            *.rar)       unrar x "$1"     ;;
+            *.gz)        gunzip "$1"      ;;
+            *.tar)       tar xvf "$1"     ;;
+            *.tbz2)      tar xvjf "$1"    ;;
+            *.tgz)       tar xvzf "$1"    ;;
+            *.zip)       unzip "$1"       ;;
+            *.Z)         uncompress "$1"  ;;
+            *)           echo "'$1' cannot be extracted via extract()" ;;
+        esac
+    else
+        echo "'$1' is not a valid file"
+    fi
 }
 
 # HomeBrew
