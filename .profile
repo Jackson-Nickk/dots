@@ -1,7 +1,7 @@
 # Jack's Profile
 
 export PATH="$HOME/.local/bin:$PATH"
-export PATH="$HOME/.local/sc:$PATH"
+export PATH="$HOME/sc:$PATH"
 export PATH="/home/jack/go/bin:$PATH"
 export EDITOR="hx"
 export MANPAGER="less -R --use-color -Dd+r -Du+b -Dk+y"

@@ -37,6 +37,8 @@ alias xr='doas xbps-remove'
 alias o='xdg-open'
 alias cmctl='connmanctl'
 alias man='batman'
+alias lssvs='ls /etc/sv'
+alias lssve='ls /var/service'
 
 # lfcd
 alias lf='lfcd'
