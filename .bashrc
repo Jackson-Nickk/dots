@@ -8,6 +8,13 @@
 GIT_PS1_SHOWDIRTYSTATE=1
 PS1='[\u \w]$(__git_ps1 " (%s)")\$ '
 
+# Optional shell options
+shopt -s autocd
+shopt -s cdspell
+shopt -s checkjobs
+shopt -s dirspell
+shopt -s execfail
+
 # Aliases
 alias g='grep'
 alias cls='clear'
@@ -39,6 +46,10 @@ alias cmctl='connmanctl'
 alias lssvs='ls /etc/sv'
 alias lssve='ls /var/service'
 alias lf='lfcd'
+alias pull='git pull'
+alias push='git push'
+alias commit='git commit'
+
 
 # LFCD
 lfcd () {
@@ -75,6 +86,6 @@ extract ()
 }
 
 # HomeBrew
-if [ -f /home/linuxbrew/ ]; then
+if [ -d "/home/linuxbrew/" ]; then
     eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 fi
