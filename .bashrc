@@ -49,6 +49,8 @@ alias lf='lfcd'
 alias pull='git pull'
 alias push='git push'
 alias commit='git commit'
+alias footlight='kill -s 12 $(pidof foot)'
+alias footdark='kill -s 10 $(pidof foot)'
 
 
 # LFCD
