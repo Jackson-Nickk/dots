@@ -52,21 +52,21 @@ alias commit='git commit'
 alias footlight='kill -s 12 $(pidof foot)'
 alias footdark='kill -s 10 $(pidof foot)'
 
-
-# LFCD
+# Functions
+## LFCD
 lfcd () {
     # `command` is needed in case `lfcd` is aliased to `lf`
     cd "$(command lf -print-last-dir "$@")"
 }
 
-# Make a directory and enter it
+## Make a directory and enter it
 mkcd ()
 {
     mkdir -p -- "$1" && cd -P -- "$1"
 }
 
-# Universal extract function
-extract ()
+## Universal extract function
+ext ()
 {
     if [ -f "$1" ] ; then
         case "$1" in
@@ -86,6 +86,7 @@ extract ()
         echo "'$1' is not a valid file"
     fi
 }
+
 
 # HomeBrew
 if [ -d "/home/linuxbrew/" ]; then
