@@ -1,0 +1,14 @@
+[colors]
+alpha = 0.8
+background = 000000
+foreground = 00b300
+cursor = 000000 b300b3
+
+regular0 = 000000 # black
+regular1 = b30000 # red
+regular2 = 00b300 # green 
+regular3 = b3b300 # yellow 
+regular4 = 0080ff # blue 
+regular5 = b300b3 # magenta 
+regular6 = 00b3b3 # cyan 
+regular7 = d9d9d9 # white
