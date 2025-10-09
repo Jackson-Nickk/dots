@@ -40,4 +40,6 @@ alias free='free -h'
 alias man='batman'
 alias k='kak'
 alias z='zathura'
+alias fidle='kill -s 20 $(pidof swayidle)'
+alias ridle='kill -s 18 $(pidof swayidle)'
 
