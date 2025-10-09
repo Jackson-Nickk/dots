@@ -3,7 +3,7 @@
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/sc:$PATH"
 export PATH="/home/jack/go/bin:$PATH"
-export EDITOR="hx"
+export EDITOR="kak"
 export MANPAGER="less -R --use-color -Dd+r -Du+b -Dk+y"
 export PAGER="less -R --use-color -Dd+r -Du+b -Dk+y"
 export QT_QPA_PLATFORM="wayland"

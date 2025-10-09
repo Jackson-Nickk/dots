@@ -16,10 +16,10 @@ shopt -s dirspell
 shopt -s execfail
 
 # Import Aliases
-source ~/.config/shellrc/aliases
+source ~/.config/shrc/aliases
 
 # Import Functions
-source ~/.config/shellrc/functions
+source ~/.config/shrc/functions
 
 # HomeBrew
 if [ -d "/home/linuxbrew/" ]; then
