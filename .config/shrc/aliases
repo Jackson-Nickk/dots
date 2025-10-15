@@ -32,7 +32,6 @@ alias footdark='kill -s 10 $(pidof foot)'
 alias df='df -h'
 alias du='du -h'
 alias free='free -h'
-alias man='batman'
 alias k='kak'
 alias z='zathura'
 

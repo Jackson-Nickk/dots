@@ -1,5 +1,6 @@
 # Jack's Profile
 
+export XDG_CONFIG_HOME="$HOME/.config"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/sc:$PATH"
 export PATH="/home/jack/go/bin:$PATH"
