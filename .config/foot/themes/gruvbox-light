@@ -1,8 +1,8 @@
-# Gruvbox Light Soft
-[colors]
-background=f2e5bc
+# Gruvbox Light
+[colors2]
+background=fbf1c7
 foreground=3c3836
-regular0=f2e5bc
+regular0=fbf1c7
 regular1=cc241d
 regular2=98971a
 regular3=d79921
