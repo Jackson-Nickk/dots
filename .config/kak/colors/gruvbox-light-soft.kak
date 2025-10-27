@@ -1,4 +1,4 @@
-# gruvbox light theme
+# Gruvbox Light Soft theme
 
 evaluate-commands %sh{
     gray="rgb:928374"
@@ -10,8 +10,8 @@ evaluate-commands %sh{
     aqua="rgb:427b58"
     orange="rgb:af3a03"
 
-    bg="rgb:fbf1c7"
-    bg_alpha="rgba:fbf1c7a0"
+    bg="rgb:f2e5bc"
+    bg_alpha="rgba:f2e5bca0"
     bg1="rgb:ebdbb2"
     bg2="rgb:d5c4a1"
     bg3="rgb:bdae93"

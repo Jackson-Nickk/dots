@@ -1,6 +1,3 @@
+include = ~/.config/mako/theme.ln
 font=monospace 18
-background-color=#282828
-text-color=#ebdbb2
-border-color=#689d6a
-progress-color=over #cc241d
 

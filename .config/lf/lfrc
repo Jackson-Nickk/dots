@@ -3,10 +3,7 @@ set ignorecase true
 set icons true
 
 # Preview
-set previewer ctpv
-set cleaner ctpvclear
-&ctpv -s $id
-&ctpvquit $id
+set previewer ~/.config/lf/previewer
 
 # Custom Functions
 cmd mkdir ${{

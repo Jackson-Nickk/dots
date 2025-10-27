@@ -9,6 +9,8 @@ export MANPAGER="less -R --use-color -Dd+r -Du+b -Dk+y"
 export PAGER="less -R --use-color -Dd+r -Du+b -Dk+y"
 export QT_QPA_PLATFORM="wayland"
 export MOZ_ENABLE_WAYLAND="1"
+export monosize="14"
+export KAKOUNE_CONFIG_DIR="$XDG_CONFIG_HOME/kak"
 
 if [ -n "$BASH_VERSION" ]; then
     if [ -f "$HOME/.bashrc" ]; then
@@ -16,4 +18,3 @@ if [ -n "$BASH_VERSION" ]; then
     fi
 fi
 
-dwl -s startup.sh && clear

@@ -1,4 +1,4 @@
-source night.ln
+source ~/.config/kak/theme.ln
 add-highlighter global/ number-lines -relative -hlcursor
 add-highlighter global/ wrap -word -indent
 add-highlighter global/ show-whitespaces -lf "" -spc " "
