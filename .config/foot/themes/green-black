@@ -1,35 +1,35 @@
-# Green Dark
+# Green on Black (Ported from Konsole)
 [colors]
 cursor = ff0000 00ffff
-foreground = 009d00
-background = 001400
+foreground = 18f018
+background = 000000
 
-regular0 = 001400 # Black
+regular0 = 000000 # Black
 regular1 = ff0000 # Red
-regular2 = 00ff00 # Green
-regular3 = ffff00 # Yellow
+regular2 = 18b218 # Green
+regular3 = b26818 # Yellow
 regular4 = 0080ff # Blue
-regular5 = b300b3 # Magenta
-regular6 = 00ffff # Cyan
-regular7 = d9d9d9 # White
+regular5 = e11ee1 # Magenta
+regular6 = 18b2b2 # Cyan
+regular7 = b2b2b2 # White
 
-bright0 = 262626 # Bright Black
-bright1 = ff3333 # Bright Red
-bright2 = 33ff33 # Bright Green
-bright3 = ffff33 # Bright Yellow
-bright4 = 3333ff # Bright Blue
-bright5 = ff00ff # Bright Magenta
-bright6 = e0ffff # Bright Cyan 
+bright0 = 686868 # Bright Black
+bright1 = ff5454 # Bright Red
+bright2 = 54ff54 # Bright Green
+bright3 = ffff54 # Bright Yellow
+bright4 = 5454ff # Bright Blue
+bright5 = ff54ff # Bright Magenta
+bright6 = 54ffff # Bright Cyan 
 bright7 = ffffff # Bright White
 
-dim0 = 000000 # Dim Black 
-dim1 = 8b0000 # Dim Red
-dim2 = 006400 # Dim Green 
-dim3 = b3b300 # Dim Yellow 
-dim4 = 0000b3 # Dim Blue 
-dim5 = 8b008b # Dim Magenta 
-dim6 = 008b8b # Dim Cyan 
-dim7 = 696969 # Dim White
+dim0 = 181818 # Dim Black 
+dim1 = 651919 # Dim Red
+dim2 = 006500 # Dim Green 
+dim3 = 654a00 # Dim Yellow 
+dim4 = 000065 # Dim Blue 
+dim5 = 5f055f # Dim Magenta 
+dim6 = 006565 # Dim Cyan 
+dim7 = 656565 # Dim White
 
 
 # Thorn Light Warm
