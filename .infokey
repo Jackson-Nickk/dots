@@ -1,57 +1,37 @@
 #info
-g       first-node
-G       last-node
-\mb     beginning-of-node
-\me     end-of-node
+h       get-help-window
+H       get-info-help-node
+gg      beginning-of-node
+ge      end-of-node
+gf      first-node
+gl      last-node
+gn      global-next-node
+gp      global-prev-node
+gu      up-node
+^g      goto-node
 j       next-line
 k       prev-line
-
 f       scroll-forward-page-only
-^f      scroll-forward-page-only
-\m\     scroll-forward-page-only
 z       scroll-forward-page-only-set-window
-
 b       scroll-backward-page-only
-^b      scroll-backward-page-only
 w       scroll-backward-page-only-set-window
-
-\kd     down-line
-^e      down-line
-^j      down-line
-^m      down-line
-\ku     up-line
-^y      up-line
-^k      up-line
-
 d       scroll-half-screen-down
-^d      scroll-half-screen-down
 u       scroll-half-screen-up
-^u      scroll-half-screen-up
-
-^xn     next-node
-^xp     prev-node
-^xu     up-node
-'       last-node
-\mt     top-node
-\md     dir-node
-
-^xg     goto-node
+]       next-node
+[       prev-node
+t       top-node
 I       goto-invocation-node
-
 n       search-next
 N       search-previous
-
+\r      select-reference-this-line
+^c      abort-key
+^j      down-line
+^k      up-line
 \mf     xref-item
 ^xr     xref-item
-
-\mg     select-reference-this-line
-^x^j    select-reference-this-line
-^x^m    select-reference-this-line
-
-^c      abort-key
-
 \mh     get-info-help-node
-
+\kd     down-line
+q       quit
 :q      quit
 ZZ      quit
 
@@ -71,6 +51,5 @@ cursor-movement-scrolls=Off
 ISO-Latin=On
 nodeline=print
 visible-bell=On
-
-link-style=underline,blue
-active-link-style=red
+link-style=blue
+active-link-style=underline,red
