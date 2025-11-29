@@ -50,6 +50,5 @@ ZZ      quit
 cursor-movement-scrolls=Off
 ISO-Latin=On
 nodeline=print
-visible-bell=On
 link-style=blue
 active-link-style=underline,red
