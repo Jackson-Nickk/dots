@@ -32,7 +32,7 @@ ext () {
 
 # Create a POSIX script
 mksh () {
-  printf '#!/bin/sh\n' > "$1".sh
-  chmod +x "$1".sh
+  printf '#!/bin/sh' > $1.sh
+  chmod +x $1.sh
   $EDITOR "$1".sh
 }
