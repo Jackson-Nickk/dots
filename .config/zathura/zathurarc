@@ -1,1 +1,2 @@
 include ./theme.ln
+set font 'monospace normal 16'
