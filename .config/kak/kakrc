@@ -8,9 +8,12 @@ set-option global tabstop 4
 
 ### User Mode ###
 # Quick write and quit shortcuts
-map global user <w> ':w <ret>' -docstring 'write'
-map global user <W> ':wq <ret>' -docstring 'write & quit'
-map global user <q> ':q <ret>' -docstring 'quit'
-map global user <Q> ':q! <ret>' -docstring 'force quit'
+  map global user <w> ':w <ret>' -docstring 'write'
+  map global user <W> ':wq <ret>' -docstring 'write & quit'
+  map global user <q> ':q <ret>' -docstring 'quit'
+  map global user <Q> ':q! <ret>' -docstring 'force quit'
 # Quickly edit config file
-map global user <c> ':e ~/.config/kak/kakrc <ret>' -docstring 'edit config'
+  map global user <c> ':e ~/.config/kak/kakrc <ret>' -docstring 'edit config'
+# Yank and Paste from wl-clipboar
+  map global user <y> '<a-|> wl-copy <ret>' -docstring 'copy to clipboard'
+  map global user <p> '<|> wl-paste <ret>' -docstring 'paste from clipboard'
