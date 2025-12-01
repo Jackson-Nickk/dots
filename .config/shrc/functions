@@ -36,3 +36,8 @@ mksh () {
   chmod +x $1.sh
   $EDITOR "$1".sh
 }
+
+# Edit a script in PATH
+editsh () {
+  $EDITOR $(which $1)
+}

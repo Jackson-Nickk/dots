@@ -1,1 +1,2 @@
 . $XDG_CONFIG_HOME/shrc/aliases
+. $XDG_CONFIG_HOME/shrc/functions
