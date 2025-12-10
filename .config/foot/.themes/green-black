@@ -1,7 +1,6 @@
 # Green on Black (Ported from Konsole)
 [colors]
 cursor = ff0000 00ffff
-# foreground = 18f018
 foreground = 009d00
 background = 000000
 
