@@ -1,2 +1,7 @@
 . $XDG_CONFIG_HOME/shrc/aliases
 . $XDG_CONFIG_HOME/shrc/functions
+
+# Git Prompt
+. ~/.config/git-prompt.sh
+GIT_PS1_SHOWDIRTYSTATE=1
+PS1='[\u \w]$(__git_ps1 " (%s)")\$ '
