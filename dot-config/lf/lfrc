@@ -1,9 +1,22 @@
 # Basic Settings
 set ignorecase true
 set icons true
+set shell sh
+set shellopts '-eu'
+set ifs "\n"
 
 # Preview
 set previewer ~/.config/lf/previewer
+
+# Bindings
+map R bulk-rename
+map ` !true
+
+## execute current file (must be executable)
+map x $$f
+map X !$f
+map o open
+map a :push %mkdir<space>
 
 # Custom Functions
 cmd mkdir ${{
@@ -31,11 +44,11 @@ cmd extract ${{
     *.tgz)       tar xvzf "$f"    ;;
     *.zip)       unzip "$f"       ;;
     *.Z)         uncompress "$f"  ;;
+	*.7z)        7z x "$f"        ;;
     *) echo "Unsupported Format!" ;;
   esac
 }}
 
-# Bulk Rename
 cmd bulk-rename ${{
     old="$(mktemp)"
     new="$(mktemp)"
@@ -60,4 +73,9 @@ cmd bulk-rename ${{
     lf -remote "send $id unselect"
 }}
 
-map R bulk-rename
+cmd open &{{
+    case $(file --mime-type -Lb $f) in
+        text/*) lf -remote "send $id \$$EDITOR \$fx";;
+        *) for f in $fx; do $OPENER $f > /dev/null 2> /dev/null & done;;
+    esac
+}}
