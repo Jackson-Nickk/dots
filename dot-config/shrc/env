@@ -10,3 +10,5 @@ export PAGER="less -R --use-color -Dd+r -Du+b -Dk+y"
 export QT_QPA_PLATFORM="wayland"
 export MOZ_ENABLE_WAYLAND="1"
 export KAKOUNE_CONFIG_DIR="$XDG_CONFIG_HOME/kak"
+
+

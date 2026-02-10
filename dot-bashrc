@@ -1,5 +1,3 @@
-# .bashrc
-
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
@@ -7,6 +5,9 @@
 . ~/.config/git-prompt.sh
 GIT_PS1_SHOWDIRTYSTATE=1
 PS1='[\u \w]$(__git_ps1 " (%s)")\$ '
+
+# Set options
+set -o vi
 
 # Optional shell options
 shopt -s autocd

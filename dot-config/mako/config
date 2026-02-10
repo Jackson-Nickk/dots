@@ -1,8 +1,10 @@
 include=~/.config/mako/theme.ln
-font=monospace 18
-border-size=3
-border-radius=8
+font=Sans Serif 16
+border-size=2
+border-radius=0
 default-timeout=10000
 on-notify=exec mpv ~/.config/mako/hangover-sound.ogg
 width=400
 height=1000
+padding=7
+text-alignment=center

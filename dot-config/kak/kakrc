@@ -1,11 +1,14 @@
 ### General ###
-source ~/.config/kak/theme.ln
-add-highlighter global/ number-lines -relative -hlcursor -separator "| "
-add-highlighter global/ wrap -word -indent -marker "↳"
-add-highlighter global/ show-matching -previous
-set-option global ui_options terminal_assistant=none
-set-option global indentwidth 2
-set-option global tabstop 4
+  source ~/.config/kak/theme.ln
+  add-highlighter global/ number-lines -relative -hlcursor -separator "| " 
+  add-highlighter global/ wrap -word -indent -marker "↳ "
+  add-highlighter global/ show-matching -previous
+  set-option global ui_options terminal_assistant=none
+  set-option global indentwidth 2
+  set-option global tabstop 4
+
+### Kebindings ###
+  map global normal <ret> '<a-o>j'
 
 ### User Mode ###
 # Quick write and quit shortcuts
