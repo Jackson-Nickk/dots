@@ -46,6 +46,7 @@ cmd extract ${{
     *.tar)       tar xvf "$f"     ;;
     *.tbz2)      tar xvjf "$f"    ;;
     *.tgz)       tar xvzf "$f"    ;;
+    *.tar.xz)    tar xvJf "$f"    ;;
     *.zip)       unzip "$f"       ;;
     *.Z)         uncompress "$f"  ;;
 	*.7z)        7z x "$f"        ;;
