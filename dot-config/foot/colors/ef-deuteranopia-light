@@ -1,5 +1,5 @@
 # Ef-Deuteranopia-Light
-[colors]
+[colors-dark]
 cursor = f5f5ff ba35af
 foreground = 1a1a2f
 background = f5f5ff
@@ -32,7 +32,7 @@ dim6 = 3f6faf # Dim Cyan
 dim7 = d9d9d9 # Dim White
 
 # Ef-Deuteranopia-Dark
-[colors2]
+[colors-light]
 cursor = 000a1f b379bf
 foreground = ddddee
 background = 000a1f

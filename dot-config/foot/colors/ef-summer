@@ -1,0 +1,24 @@
+# Ef-Summer
+[colors-dark]
+cursor = ffffff cf0090
+foreground = 4f4073
+background = fff2f3
+selection-background = eecfff
+
+regular0 = 000000 # Black
+regular1 = d3303a # Red
+regular2 = 217a3c # Green
+regular3 = a45f22 # Yellow
+regular4 = 375ce6 # Blue
+regular5 = ba35af # Magenta
+regular6 = 4fb0cf # Cyan
+regular7 = ffffff # White
+
+bright0 = 262626 # Bright Black
+bright1 = d50f7f # Bright Red
+bright2 = 007f68 # Bright Green
+bright3 = b65050 # Bright Yellow
+bright4 = 065fff # Bright Blue
+bright5 = 8e44f3 # Bright Magenta
+bright6 = 3dc0b0 # Bright Cyan 
+bright7 = ffffff # Bright White

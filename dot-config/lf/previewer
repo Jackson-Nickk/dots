@@ -7,4 +7,13 @@ case "$(file -Lb --mime-type -- "$1")" in
   text/*)
     cat "$1"
     ;;
+  application/vnd.rar)
+    unrar lb "$1"
+    ;;
+  application/x-7z-compressed)
+    7z l "$1"
+    ;;
+  application/zip)
+    unzip -l "$1" | grep 'Length' -A100
+    ;;
 esac

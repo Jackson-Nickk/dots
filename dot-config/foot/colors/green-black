@@ -1,7 +1,8 @@
 # Green on Black (Ported from Konsole)
-[colors]
-alpha = 0.8
-cursor = ff0000 00ffff
+[colors-dark]
+alpha = 0.7
+cursor = 000000 00ffff
+# foreground = 52c54c
 foreground = 00ff66
 background = 000000
 
@@ -11,7 +12,7 @@ regular2 = 18b218 # Green
 regular3 = b26818 # Yellow
 regular4 = 0080ff # Blue
 regular5 = e11ee1 # Magenta
-regular6 = 18b2b2 # Cyan
+regular6 = 00ffff # Cyan
 regular7 = b2b2b2 # White
 
 bright0 = 686868 # Bright Black
@@ -20,7 +21,7 @@ bright2 = 54ff54 # Bright Green
 bright3 = ffff54 # Bright Yellow
 bright4 = 5454ff # Bright Blue
 bright5 = ff54ff # Bright Magenta
-bright6 = 54ffff # Bright Cyan 
+bright6 = e0ffff # Bright Cyan 
 bright7 = ffffff # Bright White
 
 dim0 = 181818 # Dim Black 
@@ -31,28 +32,3 @@ dim4 = 000065 # Dim Blue
 dim5 = 5f055f # Dim Magenta 
 dim6 = 006565 # Dim Cyan 
 dim7 = 656565 # Dim White
-
-
-# Thorn Light Warm
-[colors2]
-cursor = 3c6746 b4e1b2
-foreground = 3c6746
-background = cde3c8
-
-regular0 = cde3c8 # Black
-regular1 = 971015 # Red
-regular2 = 5e800e # Green
-regular3 = bf7021 # Yellow
-regular4 = 4f8fa1 # Blue
-regular5 = 913069 # Magenta
-regular6 = bf442b # Cyan
-regular7 = 7a8386 # White
-
-bright0 = 73a08d # Bright Black
-bright1 = 971015 # Bright Red
-bright2 = 5e800e # Bright Green
-bright3 = bf7021 # Bright Yellow
-bright4 = 4f8fa1 # Bright Blue
-bright5 = 913069 # Bright Magenta
-bright6 = bf442b # Bright Cyan 
-bright7 = 1d4e27 # Bright White

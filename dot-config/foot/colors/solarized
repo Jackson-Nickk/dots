@@ -1,7 +1,8 @@
+# -*- conf -*-
 # Solarized dark+light
 
 # Dark
-[colors]
+[colors-dark]
 cursor=     002b36 93a1a1
 background= 002b36
 foreground= 839496
@@ -22,8 +23,9 @@ bright5=    6c71c4
 bright6=    93a1a1
 bright7=    fdf6e3
 
+
 # Light
-[colors2]
+[colors-light]
 cursor=     fdf6e3 586e75
 background= fdf6e3
 foreground= 657b83
@@ -43,4 +45,3 @@ bright4=    657b83
 bright5=    6c71c4
 bright6=    586e75
 bright7=    002b36
-

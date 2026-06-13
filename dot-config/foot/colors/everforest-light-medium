@@ -1,5 +1,5 @@
 # Everforest - Light - Medium 
-[colors]
+[colors-dark]
 alpha=1.0
 background=fdf6e3
 foreground=5c6a72
@@ -23,7 +23,7 @@ bright6=35a77c # cyan
 bright7=dfddc8 # white
 
 # Everforest - Dark - Hard
-[colors2]
+[colors-light]
 alpha=1.0
 background=2b3339
 foreground=d3c6aa

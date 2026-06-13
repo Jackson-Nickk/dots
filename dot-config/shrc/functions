@@ -1,20 +1,21 @@
 # LFCD
-lfcd () {
+lfcd() {
     # `command` is needed in case `lfcd` is aliased to `lf`
-    cd "$(command lf -print-last-dir "$@")"
+    cd "$(command lf -print-last-dir "$@")" || return 1
 }
 
 # Make a directory and enter it
-mkcd () {
-    mkdir -p -- "$1" && cd -P -- "$1"
+mkcd() {
+    mkdir -p -- "$1" && cd -P -- "$1" || return 1
 }
 
 # Universal extract function
-ext () {
+extract() {
   if [ -f "$1" ] ; then
     case "$1" in
         *.tar.bz2)   tar xvjf "$1"    ;;
         *.tar.gz)    tar xvzf "$1"    ;;
+        *.tar.xz)    tar xvJf "$1"    ;;
         *.bz2)       bunzip2 "$1"     ;;
         *.rar)       unrar x "$1"     ;;
         *.gz)        gunzip "$1"      ;;
@@ -23,21 +24,22 @@ ext () {
         *.tgz)       tar xvzf "$1"    ;;
         *.zip)       unzip "$1"       ;;
         *.Z)         uncompress "$1"  ;;
+        *.7z)        7z x "$1"        ;;
         *)           echo "'$1' cannot be extracted via extract()" ;;
         esac
     else
-        echo "'$1' is not a valid file"
+        echo "$1 is not a valid file"
   fi
 }
 
 # Create a POSIX script
-mksh () {
-  printf '#!/bin/sh' > $1.sh
-  chmod +x $1.sh
-  $EDITOR "$1".sh
+mksh() {
+  printf '#!/bin/sh' > "$1"
+  chmod +x "$1"
+  $EDITOR "$1"
 }
 
 # Edit a script in PATH
-editsh () {
-  $EDITOR $(which $1)
+editsh() {
+  $EDITOR "$(which "$1")"
 }

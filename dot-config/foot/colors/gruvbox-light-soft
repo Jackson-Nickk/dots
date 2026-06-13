@@ -1,5 +1,5 @@
 # Gruvbox Light Soft
-[colors]
+[colors-dark]
 background=f2e5bc
 foreground=3c3836
 regular0=f2e5bc
@@ -20,7 +20,7 @@ bright6=427b58
 bright7=3c3836
 
 # Gruvbox Dark Hard
-[colors2]
+[colors-light]
 background=1d2021
 foreground=ebdbb2
 regular0=1d2021

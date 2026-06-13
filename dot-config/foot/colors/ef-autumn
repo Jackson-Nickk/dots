@@ -1,0 +1,24 @@
+# Ef-Autumn
+[colors-dark]
+cursor = 000000 ffaa33
+foreground = cfbcba
+background = 0f0e06
+selection-background = 3f1324
+
+regular0 = 000000 # Black
+regular1 = ef656a # Red
+regular2 = 2fa526 # Green
+regular3 = c48702 # Yellow
+regular4 = 379cf6 # Blue
+regular5 = d570af # Magenta
+regular6 = 00ffff # Cyan
+regular7 = ffffff # White
+
+bright0 = 262626 # Bright Black
+bright1 = ff7a7f # Bright Red
+bright2 = 00b066 # Bright Green
+bright3 = df8f6f # Bright Yellow
+bright4 = 029fff # Bright Blue
+bright5 = af8aff # Bright Magenta
+bright6 = e0ffff # Bright Cyan 
+bright7 = ffffff # Bright White

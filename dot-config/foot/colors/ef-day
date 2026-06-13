@@ -1,8 +1,8 @@
 # Ef-Day
-[colors]
+[colors-dark]
 cursor = f5f5ff ba35af
 foreground = 1a1a2f
-background = f5f5ff
+background = fff5ea
 
 regular0 = 000000 # Black
 regular1 = ba2d2f # Red
@@ -33,7 +33,7 @@ dim7 = d9d9d9 # Dim White
 
 
 # Ef-Night
-[colors2]
+[colors-light]
 cursor = d570af afbcbf
 foreground = afbcbf
 background = 000e17

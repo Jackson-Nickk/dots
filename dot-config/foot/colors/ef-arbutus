@@ -1,0 +1,23 @@
+# Ef-Arbutus
+[colors-dark]
+cursor = ffead8 208f10
+foreground = 393330
+background = ffead8
+
+regular0 = 000000 # Black
+regular1 = b0000f # Red
+regular2 = 007000 # Green
+regular3 = 906200 # Yellow
+regular4 = 375cc6 # Blue
+regular5 = a23ea4 # Magenta
+regular6 = 689d6a # Cyan
+regular7 = ffffff # White
+
+bright0 = 262626 # Bright Black
+bright1 = aa184f # Bright Red
+bright2 = 00704f # Bright Green
+bright3 = 8a6340 # Bright Yellow
+bright4 = 265fbf # Bright Blue
+bright5 = 6448ca # Bright Magenta
+bright6 = 427b58 # Bright Cyan 
+bright7 = ffffff # Bright White

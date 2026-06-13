@@ -1,0 +1,23 @@
+# Ef-Spring
+[colors-dark]
+cursor = f6fff9 bf005f
+foreground = 34494a
+background = f6fff9
+
+regular0 = 000000 # Black
+regular1 = c42d2f # Red
+regular2 = 1a870f # Green
+regular3 = a45f22 # Yellow
+regular4 = 375cc6 # Blue
+regular5 = d5206f # Magenta
+regular6 = 5faaef # Cyan
+regular7 = ffffff # White
+
+bright0 = 262626 # Bright Black
+bright1 = cf2f4f # Bright Red
+bright2 = 007f68 # Bright Green
+bright3 = ae5a30 # Bright Yellow
+bright4 = 265fbf # Bright Blue
+bright5 = 9435b4 # Bright Magenta
+bright6 = 0db0ff # Bright Cyan 
+bright7 = ffffff # Bright White

@@ -1,0 +1,69 @@
+# Ef-Frost
+[colors-dark]
+cursor = ffffff 0055bb
+foreground = 232323
+background = fcffff
+selection-background = d4eaf3
+
+regular0 = 000000 # Black
+regular1 = c42d2f # Red
+regular2 = 008a00 # Green
+regular3 = aa6100 # Yellow
+regular4 = 004fc0 # Blue
+regular5 = aa44c5 # Magenta
+regular6 = 18b2b2 # Cyan
+regular7 = ffffff # White
+
+bright0 = 262626 # Bright Black
+bright1 = cf2f4f # Bright Red
+bright2 = 00845f # Bright Green
+bright3 = 996c4f # Bright Yellow
+bright4 = 065fff # Bright Blue
+bright5 = 7f5ae0 # Bright Magenta
+bright6 = 54ffff # Bright Cyan 
+bright7 = ffffff # Bright White
+
+dim0 = 000000 # Dim Black 
+dim1 = ce3f00 # Dim Red
+dim2 = 5f7200 # Dim Green 
+dim3 = b75515 # Dim Yellow 
+dim4 = 5f5fdf # Dim Blue 
+dim5 = cb2f80 # Dim Magenta 
+dim6 = 006565 # Dim Cyan 
+dim7 = d9d9d9 # Dim White
+
+
+# Ef-Night
+[colors-light]
+cursor = d570af afbcbf
+foreground = afbcbf
+background = 000e17
+
+regular0 = 000000 # Black
+regular1 = ef656a # Red
+regular2 = 1fa526 # Green
+regular3 = c48502 # Yellow
+regular4 = 379cf6 # Blue
+regular5 = d570af # Magenta
+regular6 = 4fb0cf # Cyan
+regular7 = ffffff # White
+
+bright0 = 262626 # Bright Black
+bright1 = ef798f # Bright Red
+bright2 = 00a972 # Bright Green
+bright3 = df8f6f # Bright Yellow
+bright4 = 029fff # Bright Blue
+bright5 = af8aff # Bright Magenta
+bright6 = 3dc0b0 # Bright Cyan 
+bright7 = ffffff # Bright White
+
+dim0 = 000000 # Dim Black 
+dim1 = f47360 # Dim Red
+dim2 = 50a22f # Dim Green 
+dim3 = e6832f # Dim Yellow 
+dim4 = 6a88ff # Dim Blue 
+dim5 = e580ea # Dim Magenta 
+dim6 = 6fafff # Dim Cyan 
+dim7 = d9d9d9 # Dim White
+
+

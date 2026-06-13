@@ -2,7 +2,7 @@
 # PaperColorLight
 # Palette based on https://github.com/NLKNguyen/papercolor-theme
 
-[colors]
+[colors-dark]
 cursor=eeeeee 444444
 background=eeeeee
 foreground=444444
@@ -22,10 +22,9 @@ bright4=d75f00   # bright blue
 bright5=d75f00   # bright magenta
 bright6=4c7a5d   # bright cyan
 bright7=005faf   # bright white
-# selection-foreground=eeeeee
-# selection-background=0087af
+selection-background=0087af
 
-[colors2]
+[colors-light]
 cursor=1c1c1c eeeeee
 background=1c1c1c
 foreground=eeeeee

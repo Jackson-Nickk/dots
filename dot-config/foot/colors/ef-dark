@@ -1,0 +1,23 @@
+# Ef-Dark
+[colors-dark]
+cursor = 000000 ff76ff
+foreground = d0d0d0
+background = 000000
+
+regular0 = 000000 # Black
+regular1 = ef6560 # Red
+regular2 = 0faa26 # Green
+regular3 = bf9032 # Yellow
+regular4 = 3f95f6 # Blue
+regular5 = d369af # Magenta
+regular6 = 00ffff # Cyan
+regular7 = ffffff # White
+
+bright0 = 262626 # Bright Black
+bright1 = ff5a7a # Bright Red
+bright2 = 00a692 # Bright Green
+bright3 = df8a5a # Bright Yellow
+bright4 = 029fff # Bright Blue
+bright5 = af85ff # Bright Magenta
+bright6 = e0ffff # Bright Cyan 
+bright7 = ffffff # Bright White

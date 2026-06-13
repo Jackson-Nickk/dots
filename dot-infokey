@@ -34,6 +34,8 @@ N       search-previous
 q       quit
 :q      quit
 ZZ      quit
+c       clear-search
+
 
 #echo-area
 \mh     echo-area-backward
@@ -52,3 +54,4 @@ ISO-Latin=On
 nodeline=print
 link-style=blue
 active-link-style=underline,red
+match-style=standout,magenta

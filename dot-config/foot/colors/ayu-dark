@@ -1,0 +1,24 @@
+# Ayu-Dark
+[colors-dark]
+cursor =  000000 ff8f40
+foreground = b3b1ad
+background = 000000
+alpha = 0.7
+
+regular0 = 000000 # black
+regular1 = ff3333 # red
+regular2 = c2d94c # green
+regular3 = ffee99 # yellow
+regular4 = 59c2ff # blue
+regular5 = ca9bf7 # magenta
+regular6 = 95e6cb # cyan
+regular7 = ffffff # white
+
+bright0 = 3e4b59 # bright black
+bright1 = f07178 # bright red
+bright2 = aad94c # bright green
+bright3 = ffb454 # bright yellow
+bright4 = 59c2ff # bright blue
+bright5 = d2a6ff # bright magenta
+bright6 = 95e6cb # bright cyan
+bright7 = f2f0e7 # bright white

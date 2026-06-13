@@ -14,6 +14,9 @@ map X !$f
 map o open
 map a mkdir
 map ge bottom
+map gt cd ~/.tmp
+map W set-wall
+map P pastefile
 
 # Custom Functions
 cmd pastefile ${{
@@ -40,13 +43,13 @@ cmd extract ${{
   case "$f" in
     *.tar.bz2)   tar xvjf "$f"    ;;
     *.tar.gz)    tar xvzf "$f"    ;;
-    *.bz2)       bunzip2 "$f"     ;;
-    *.rar)       unrar x "$f"     ;;
-    *.gz)        gunzip "$f"      ;;
+    *.tar.xz)    tar xvJf "$f"    ;;
     *.tar)       tar xvf "$f"     ;;
     *.tbz2)      tar xvjf "$f"    ;;
     *.tgz)       tar xvzf "$f"    ;;
-    *.tar.xz)    tar xvJf "$f"    ;;
+    *.bz2)       bunzip2 "$f"     ;;
+    *.rar)       unrar x "$f"     ;;
+    *.gz)        gunzip "$f"      ;;
     *.zip)       unzip "$f"       ;;
     *.Z)         uncompress "$f"  ;;
 	*.7z)        7z x "$f"        ;;
@@ -78,9 +81,18 @@ cmd bulk-rename ${{
   lf -remote "send $id unselect"
 }}
 
-cmd open &{{
+cmd open ${{
   case $(file --mime-type -Lb $f) in
     text/*) lf -remote "send $id \$$EDITOR \$fx";;
     *) for f in $fx; do $OPENER $f > /dev/null 2> /dev/null & done;;
   esac
+}}
+
+cmd set-wall ${{
+  setwall.sh "$f"
+}}
+
+cmd adb-push ${{
+  set -f
+  adb-push.sh $fx
 }}

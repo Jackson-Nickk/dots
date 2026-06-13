@@ -2,7 +2,8 @@
 
 # Color palette
 # declare-option str black default
-declare-option str bg_main 'rgb:0f0e06'
+# declare-option str bg_main 'rgb:0f0e06'
+declare-option str bg_main 'default'
 declare-option str fg_main 'rgb:cfbcba'
 declare-option str bg_dim 'rgb:26211d'
 declare-option str fg_dim 'rgb:887c8a'

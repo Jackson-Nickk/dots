@@ -1,0 +1,23 @@
+# Ef-Light
+[colors-dark]
+cursor = ffffff 0033cc
+foreground = 202020
+background = ffffff
+
+regular0 = 000000 # Black
+regular1 = d3303a # Red
+regular2 = 217a3c # Green
+regular3 = a45f22 # Yellow
+regular4 = 3740cf # Blue
+regular5 = ba35af # Magenta
+regular6 = 00ffff # Cyan
+regular7 = ffffff # White
+
+bright0 = 262626 # Bright Black
+bright1 = d50f7f # Bright Red
+bright2 = 008858 # Bright Green
+bright3 = b65050 # Bright Yellow
+bright4 = 065fff # Bright Blue
+bright5 = 6052cf # Bright Magenta
+bright6 = e0ffff # Bright Cyan 
+bright7 = ffffff # Bright White
