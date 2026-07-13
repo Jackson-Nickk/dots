@@ -2,8 +2,7 @@
 
 # Color palette
 # declare-option str black default
-# declare-option str bg_main 'rgb:0f0e06'
-declare-option str bg_main 'default'
+declare-option str bg_main 'rgb:0f0e06'
 declare-option str fg_main 'rgb:cfbcba'
 declare-option str bg_dim 'rgb:26211d'
 declare-option str fg_dim 'rgb:887c8a'
@@ -21,7 +20,8 @@ declare-option str blue 'rgb:379cf6'
 declare-option str blue_bright 'rgb:029fff'
 declare-option str purple 'rgb:d570af'
 declare-option str purple_bright 'rgb:af8aff'
-declare-option str bg_mode_line 'rgb:692a12'
+# declare-option str bg_mode_line 'rgb:692a12'
+declare-option str bg_mode_line 'rgb:0f0e06'
 declare-option str fg_mode_line 'rgb:feeeca'
 declare-option str cursor 'rgb:ffaa33'
 declare-option str bg_hl_line 'rgb:302a3a'

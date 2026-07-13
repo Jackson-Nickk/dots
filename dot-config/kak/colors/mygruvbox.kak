@@ -1,7 +1,7 @@
 # Mygruvbox theme for Kakoune
 
 # Color palette
-# declare-option str black 'rgb:282828'
+declare-option str black 'rgb:282828'
 declare-option str black default
 declare-option str dark 'rgb:1d2021'
 declare-option str gray 'rgb:928374'
@@ -39,7 +39,7 @@ set-face global attribute "%opt{orange}"
 set-face global bracket "%opt{white}+b"
 set-face global arguement "%opt{orange}"
 set-face global comma "%opt{white}"
-# set-face global constant "%opt{white}+b"
+set-face global constant "%opt{white}+b"
 set-face global comment "%opt{gray}+i"
 set-face global meta "%opt{aqua}"
 set-face global builtin "%opt{aqua}+b"
@@ -57,7 +57,7 @@ set-face global list "%opt{white}"
 
 # Builtin faces
 set-face global Default "%opt{white},%opt{black}"
-# set-face global Default "%opt{white},default"
+set-face global Default "%opt{white},default"
 set-face global PrimarySelection "default,%opt{psel}"
 set-face global SecondarySelection "default,%opt{ssel}"
 set-face global PrimaryCursor "%opt{dark},%opt{purple}"

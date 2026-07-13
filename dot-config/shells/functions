@@ -43,3 +43,14 @@ mksh() {
 editsh() {
   $EDITOR "$(which "$1")"
 }
+
+_editsh-complete() {
+  local cur
+  # Current word being completed
+  cur="${COMP_WORDS[COMP_CWORD]}"
+  # Only complete the first argument (the command name)
+  if (( COMP_CWORD == 1 )); then
+      COMPREPLY=( $(compgen -c -- "$cur") )
+  fi
+}
+

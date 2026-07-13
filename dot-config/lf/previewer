@@ -1,8 +1,8 @@
 #!/bin/sh
 
-case "$(file -Lb --mime-type -- "$1")" in
+case "$(file --dereference --brief --mime-type -- "$1")" in
   image/*)
-    chafa -f sixel -s "$2x$3" --animate off --polite on -t 1 --bg black "$1"
+    chafa -w 7 -f sixel -s "$2x$3" --animate off --polite on -t 1 --bg black "$1"
     ;;
   text/*)
     cat "$1"
@@ -15,5 +15,17 @@ case "$(file -Lb --mime-type -- "$1")" in
     ;;
   application/zip)
     unzip -l "$1" | grep 'Length' -A100
+    ;;
+  application/x-tar)
+    tar tf "$1"
+    ;;
+  application/gzip)
+    tar tf "$1"
+    ;;
+  application/x-xz)
+    tar tf "$1"
+    ;;
+  video/*)
+    ffmpegthumbnailer -m -cjpeg -o- -s0 -i "$1" | chafa -w 7 -f sixel -s "$2x$3" --animate off --polite on -t 1 --bg black
     ;;
 esac

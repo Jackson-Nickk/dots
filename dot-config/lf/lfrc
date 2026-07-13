@@ -17,6 +17,7 @@ map ge bottom
 map gt cd ~/.tmp
 map W set-wall
 map P pastefile
+map E $$EDITOR $(fzf)
 
 # Custom Functions
 cmd pastefile ${{

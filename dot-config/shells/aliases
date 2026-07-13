@@ -1,4 +1,5 @@
 # Aliases
+alias grep='grep --color=auto'
 alias g='grep'
 alias cls='clear'
 alias q='exit'
@@ -39,3 +40,5 @@ alias apki='apk info'
 alias stowdots='stow --dotfiles'
 alias w3m='w3m -sixel'
 alias ffprobe='ffprobe -hide_banner'
+alias wscan='connmanctl scan wifi'
+alias wshow='connmanctl services'

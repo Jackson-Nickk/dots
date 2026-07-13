@@ -6,21 +6,21 @@
 GIT_PS1_SHOWDIRTYSTATE=1
 PS1='[\u \w]$(__git_ps1 " (%s)")\$ '
 
-# Set options
-set -o vi
+# Import Aliases
+source ~/.config/shells/aliases
 
-# Optional shell options
+# Import Functions
+source ~/.config/shells/functions
+
+#--- Settings ---#
+set -o vi
 shopt -s autocd
 shopt -s cdspell
 shopt -s checkjobs
 shopt -s dirspell
 shopt -s execfail
+complete -F _editsh-complete editsh
 
-# Import Aliases
-source ~/.config/shrc/aliases
-
-# Import Functions
-source ~/.config/shrc/functions
 
 # HomeBrew
 if [ -d "/home/linuxbrew/" ]; then
