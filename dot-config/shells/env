@@ -7,6 +7,7 @@ export MANPAGER="$PAGER"
 export QT_QPA_PLATFORM="wayland"
 export MOZ_ENABLE_WAYLAND="1"
 export KAKOUNE_CONFIG_DIR="$XDG_CONFIG_HOME/kak"
+export W3M_DIR="$XDG_CONFIG_HOME/w3m"
 
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="/home/jack/go/bin:$PATH"

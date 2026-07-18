@@ -21,7 +21,8 @@ map global insert <tab> '  '
 map global normal <ret> '<a-o>j'
 
 map global normal = '<a-o><a-j>:format-selections<ret>'
-map global normal X 'xH'
+map global normal X 'x'
+map global normal x 'xH'
 map global normal <c-a> ': inc %val{count} +<ret>' -docstring 'Increment Number'
 map global normal <c-x> ': inc %val{count} -<ret>' -docstring 'Decrement Number'
 map global normal <c-m> ':enter-user-mode surround <ret>' -docstring 'Surround Selection'
@@ -89,8 +90,8 @@ hook global InsertCompletionHide .* %{
   unmap window insert <s-tab> <c-p>
 }
 
-# Detect 'lfrc' as a shell script
-hook global BufCreate .*lfrc %{ set-option buffer filetype sh }
+# Detect lf files as shell scripts
+hook global BufCreate .*/lf/.* %{ set-option buffer filetype sh }
 
 # Auto-Pair: Generic
 # hook global BufSetOption filetype=.+ %{
