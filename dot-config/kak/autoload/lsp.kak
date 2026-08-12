@@ -20,17 +20,13 @@ map global object D '<a-semicolon>lsp-diagnostic-object error<ret>' -docstring '
 ### Hooks ###
 # Default server hooks need to be removed first, then hooked to another server.
 remove-hooks global lsp-filetype-sh
-
-# Bash servers keep kak-lsp running after kak is closed.
-# Disabled until further investigations.
-#
-# hook -group lsp-filetype-sh global BufSetOption filetype=(sh|bash) %{
-#   set-option buffer lsp_servers %{
-#     [bashd]
-#     root_globs = [".git"]
-#     command = "bashd"
-#   }
-# }
+hook -group lsp-filetype-sh global BufSetOption filetype=(sh|bash) %{
+  set-option buffer lsp_servers %{
+    [bashd]
+    root_globs = [".git"]
+    command = "bashd"
+  }
+}
 
 hook global WinSetOption filetype=(c|cpp) %{
   hook window -group semantic-tokens BufReload .* lsp-semantic-tokens
@@ -48,4 +44,12 @@ hook -group lsp-filetype-markdown global BufSetOption filetype=markdown %{
         [markdown-oxide]
         root_globs = [".obsidian", ".moxide.toml"]
     }
+}
+
+hook -group lsp-filetype-lisp global BufSetOption filetype=(scheme|lisp|guile) %{
+  set-option buffer lsp_servers %{
+    [guile-lsp-server]
+    root_globs = [".git"]
+    command = "guile-lsp-server"
+  }
 }

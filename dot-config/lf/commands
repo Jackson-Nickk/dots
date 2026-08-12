@@ -1,0 +1,94 @@
+cmd pastefile ${{
+  printf "File Name: "
+  read ans
+  wl-paste > "$PWD/$ans"
+}} 
+
+
+cmd mkdir ${{
+  printf "Directory Name: "
+  read ans
+  mkdir -p $ans
+}}
+
+cmd mkfile ${{
+  printf "File Name: "
+  read ans
+  $EDITOR $ans
+}}
+
+
+cmd extract ${{
+  case "$f" in
+    *.tar.bz2)   tar xvjf "$f"    ;;
+    *.tar.gz)    tar xvzf "$f"    ;;
+    *.tar.xz)    tar xvJf "$f"    ;;
+    *.tar)       tar xvf "$f"     ;;
+    *.tbz2)      tar xvjf "$f"    ;;
+    *.tgz)       tar xvzf "$f"    ;;
+    *.bz2)       bunzip2 "$f"     ;;
+    *.rar)       unrar x "$f"     ;;
+    *.gz)        gunzip "$f"      ;;
+    *.zip)       unzip "$f"       ;;
+    *.Z)         uncompress "$f"  ;;
+	*.7z)        7z x "$f"        ;;
+    *) echo "Unsupported Format!" ;;
+  esac
+}}
+
+cmd bulk-rename ${{
+  old="$(mktemp)"
+  new="$(mktemp)"
+  if [ -n "$fs" ]; then
+      fs="$(basename -a -- $fs)"
+  else
+      fs="$(ls)"
+  fi
+  printf '%s\n' "$fs" > "$old"
+  printf '%s\n' "$fs" > "$new"
+  $EDITOR "$new"
+  [ "$(wc -l < "$new")" -ne "$(wc -l < "$old")" ] && exit
+  paste "$old" "$new" | while IFS= read -r names; do
+    src="$(printf '%s' "$names" | cut -f1)"
+    dst="$(printf '%s' "$names" | cut -f2)"
+    if [ "$src" = "$dst" ] || [ -e "$dst" ]; then
+        continue
+    fi
+    mv -- "$src" "$dst"
+  done
+  rm -- "$old" "$new"
+  lf -remote "send $id unselect"
+}}
+
+cmd open ${{
+  case $(file --mime-type -Lb $f) in
+    text/*) lf -remote "send $id \$$EDITOR \$fx";;
+    *) for f in $fx; do $OPENER $f > /dev/null 2> /dev/null & done;;
+  esac
+}}
+
+cmd set-wall ${{
+  setwall.sh "$f"
+}}
+
+cmd adb-push ${{
+  set -f
+  adb-push.sh $fx
+}}
+
+cmd edit-in-window ${{
+  if [ -f "$f" ]; then
+    termcmd.sh $EDITOR "$f" &
+  fi
+}}
+
+cmd adoc-read ${{
+  nohup firefox "$f" 1>/dev/null &
+}}
+
+cmd mkfile ${{
+  printf "File Name: " &&
+  read ans &&
+  touch "$ans" &&
+  lf -remote "send $id select $ans"
+}}

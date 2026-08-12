@@ -1,0 +1,14 @@
+map R bulk-rename
+map x $$f
+map o open
+map a mkdir
+map ge bottom
+map gt cd ~/.tmp
+map gd cd ~/.config
+map gc cd ~/.cache
+map g/ cd /
+map W set-wall
+map P pastefile
+map E edit-in-window
+map I adoc-read
+map <a-m> mkfile

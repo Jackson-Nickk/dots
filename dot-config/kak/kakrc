@@ -1,6 +1,6 @@
 #--- Settings ---#
 source "%val{config}/theme.ln"
-add-highlighter global/ number-lines -relative -hlcursor -cursor-separator '|'
+add-highlighter global/ number-lines -relative -hlcursor 
 add-highlighter global/ wrap -word -indent -marker "↳ "
 add-highlighter global/ show-matching -previous
 set-option global ui_options terminal_assistant=none
@@ -8,7 +8,7 @@ set-option global indentwidth 2
 set-option global tabstop 4
 set-option global formatcmd 'fmt -w 65'
 set-option global autowrap_column 65
-set-option -add global modelinefmt '%sh{ printf " (%s)"  $(printf %s\\n $kak_buflist | wc -w) }'
+set-option -add global modelinefmt '%sh{ printf " (%s)"  $(printf %s\\n $kak_buflist | wc -w) }'  
 require-module wayland
 set-option global termcmd 'termcmd.sh sh -c'
 set-option global scrolloff 3,0
@@ -20,9 +20,9 @@ declare-user-mode surround
 map global insert <tab> '  '
 map global normal <ret> '<a-o>j'
 
-map global normal = '<a-o><a-j>:format-selections<ret>'
-map global normal X 'x'
-map global normal x 'xH'
+map global normal = ':format-selections<ret>'
+# map global normal X 'x'
+# map global normal x 'xH'
 map global normal <c-a> ': inc %val{count} +<ret>' -docstring 'Increment Number'
 map global normal <c-x> ': inc %val{count} -<ret>' -docstring 'Decrement Number'
 map global normal <c-m> ':enter-user-mode surround <ret>' -docstring 'Surround Selection'
@@ -37,6 +37,7 @@ map global user y '<a-|> wl-copy <ret>' -docstring 'Copy to Clipboard'
 map global user p '<|> wl-paste <ret>' -docstring 'Paste From Clipboard'
 map global user n ':new <ret>' -docstring 'New Window'
 map global user f ':find ' -docstring 'Find'
+map global user u ':ui <ret>' -docstring 'UI'
 
 map global surround b '\i[<esc>\a]<esc><a-i>r' -docstring 'Bracket'
 map global surround [ '\i[<esc>\a]<esc><a-i>r' -docstring 'Bracket'
@@ -59,6 +60,11 @@ map global surround '"' '\i"<esc>\a"<esc><a-i>Q' -docstring 'Double Quote'
 map global surround a "\i<lt><esc>\a<gt><esc><a-i><lt>" -docstring 'Angle'
 map global surround < "\i<lt><esc>\a<gt><esc><a-i><lt>" -docstring 'Angle'
 map global surround > "\i<lt><esc>\a<gt><esc><a-i><lt>" -docstring 'Angle'
+
+map global surround u "\i_<esc>\a_<esc>" -docstring 'Underline'
+map global surround _ "\i_<esc>\a_<esc>" -docstring 'Underline'
+
+map global surround * "\i*<esc>\a*<esc>" -docstring 'Asterisks'
 
 #--- Commands ---#
 define-command find -docstring "Find Files" -params 1 %{ edit %arg{1} }
@@ -108,3 +114,9 @@ hook global BufSetOption filetype=(markdown|asciidoc) %{
   hook buffer InsertChar "`" %{ execute-keys "`<left>" }
 }
 
+# ui
+hook global WinCreate .* %{
+    ui-cursorline-toggle
+    ui-matching-toggle
+    ui-search-toggle
+}

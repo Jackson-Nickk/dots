@@ -1,0 +1,6 @@
+set ignorecase true
+set icons true
+set shell sh
+set shellopts '-eu'
+set ifs "\n"
+set previewer ~/.config/lf/previewer
