@@ -54,3 +54,7 @@ _editsh-complete() {
   fi
 }
 
+gloc() {
+  guix search "$@" | grep location
+}
+

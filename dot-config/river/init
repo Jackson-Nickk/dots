@@ -5,8 +5,8 @@
 
 # Get monitor name, highest resolution, and refresh rate.
   MONITOR=$(wlr-randr | awk 'NR==1{print $1; exit}')
-  RES=$(wlr-randr | grep px | awk 'NR==1{ print $1 }')
-  REF=$(wlr-randr --json | grep refresh | awk '{ print $2 }' | sed 's/,//g' | sort -n | tail -n 1)
+  RES=$(wlr-randr | awk '/px,/ {print $1}')
+  REF=$(wlr-randr | awk '/px,/ {print $3}' | sort -n | tail -n 1)
 
 #--- Bindings ---#
 # Start Foot
@@ -62,6 +62,9 @@
   riverctl map normal $mod+Alt+Shift J resize vertical 100
   riverctl map normal $mod+Alt+Shift K resize vertical -100
   riverctl map normal $mod+Alt+Shift L resize horizontal 100
+
+# Enable trackpad tap to click
+  riverctl input pointer* tap enabled
 
 # Mouse Button to move views
   riverctl map-pointer normal $mod BTN_LEFT move-view
@@ -134,10 +137,10 @@
   done
 
 # Spawn LF file manager in Foot
-  riverctl map normal $mod E spawn "foot lf"
+  riverctl map normal $mod E spawn "termcmd.sh lf"
 
-# Spawn Firefox
-  riverctl map normal $mod B spawn "firefox"
+# Spawn default browser
+  riverctl map normal $mod B spawn "$BROWSER"
 
 # Power menu
   riverctl map normal $mod+Control P spawn "power-menu.sh"
@@ -176,11 +179,12 @@
   riverctl keyboard-layout -options "grp:ctrl_space_toggle" "us,ir"
 
 #--- Autostart ---#
-  riverctl spawn pipewire
+  riverctl spawn "pipewire"
+  riverctl spawn "pipewire-pulse"
+  riverctl spawn "wireplumber"
+  riverctl spawn "mako"
   riverctl spawn "wl-paste --watch cliphist store"
   riverctl spawn "swaybg -i ~/pic/wallpaper.ln"
-  riverctl spawn "$HOME/.config/river/status"
-  riverctl spawn "$HOME/.config/river/bar"
 
 # Setup resolution and refresh rate
   riverctl spawn "wlr-randr --output $MONITOR --mode ${RES}@${REF}"

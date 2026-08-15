@@ -2,7 +2,6 @@
 source "%val{config}/theme.ln"
 source "%val{config}/plugins/lsp.kak"
 source "%val{config}/plugins/git-branch.kak"
-source "%val{config}/plugins/parinfer.kak"
 
 add-highlighter global/ number-lines -relative -hlcursor 
 add-highlighter global/ wrap -word -indent -marker "↳ "
