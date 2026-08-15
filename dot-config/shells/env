@@ -12,3 +12,5 @@ export W3M_DIR="$XDG_CONFIG_HOME/w3m"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="/home/jack/go/bin:$PATH"
 export PATH="$PATH:$HOME/sc"
+
+export XDG_DATA_DIRS="$HOME/.local/share:$XDG_DATA_DIRS"
