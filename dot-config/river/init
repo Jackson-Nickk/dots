@@ -9,8 +9,8 @@
   REF=$(wlr-randr | awk '/px,/ {print $3}' | sort -n | tail -n 1)
 
 #--- Bindings ---#
-# Start Foot
-  riverctl map normal $mod T spawn foot
+# Start terminal
+  riverctl map normal $mod T spawn termcmd.sh
 
 # Close the focused view
   riverctl map normal $mod Q close
@@ -146,7 +146,7 @@
   riverctl map normal $mod+Control P spawn "power-menu.sh"
 
 # Menu
-  riverctl map normal $mod space spawn "wmenu.sh"
+  riverctl map normal $mod space spawn "wmenu-run.sh"
   
 #--- Settings ---#
 # Set background and border color
@@ -162,6 +162,9 @@
 # Make all views with app-id "bar" and any title use client-side decorations
   riverctl rule-add -app-id "bar" csd
 
+# Set SSD for others
+  riverctl rule-add ssd
+
 # Set the default layout generator to be rivertile and start it.
 # River will send the process group of the init executable SIGTERM on exit.
   riverctl default-layout rivertile
@@ -172,17 +175,15 @@
   riverctl declare-mode passthrough
 
 # Configure trackpoint acceleration
-  riverctl input pointer-2-10-TPPS/2_IBM_TrackPoint accel-profile flat
-  riverctl input pointer-2-10-TPPS/2_IBM_TrackPoint pointer-accel 0.3
+  riverctl input pointer* accel-profile flat
+  riverctl input pointer* pointer-accel 0.3
 
 # Keyboard Layouts
   riverctl keyboard-layout -options "grp:ctrl_space_toggle" "us,ir"
 
 #--- Autostart ---#
-  riverctl spawn "pipewire"
-  riverctl spawn "pipewire-pulse"
-  riverctl spawn "wireplumber"
   riverctl spawn "mako"
+  riverctl spawn "sandbar"
   riverctl spawn "wl-paste --watch cliphist store"
   riverctl spawn "swaybg -i ~/pic/wallpaper.ln"
 
